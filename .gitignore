@@ -1,0 +1,6 @@
+monobjc/
+monobjc-monodevelop/
+monobjc-msbuild/
+*.DS_Store
+*.swp
+*.pkg
