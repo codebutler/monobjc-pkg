@@ -1,6 +1,8 @@
 #!/bin/bash -e
 
-MONOBJC_DIST="/Users/eric/Downloads/Monobjc-2.0.492.0/dist"
+MONOBJC_VERSION="2.0.492.0"
+PKG_VERSION="0"
+MONOBJC_DIST="/Users/eric/Downloads/Monobjc-${MONOBJC_VERSION}/dist"
 MONODEVELOP_DIST="/Users/eric/Projects/MonoDevelop.Monobjc/bin/Debug"
 
 rm -rfv monobjc monobjc-msbuild
@@ -41,4 +43,4 @@ cp -v $MONODEVELOP_DIST/MonoDevelop.Monobjc.Build.Tasks.dll     \
       $MONODEVELOP_DIST/MonoDevelop.MacDev.dll.mdb              \
       monobjc-msbuild
       
-/Developer/usr/bin/packagemaker -v --doc Monobjc.pmdoc  --out Monobjc.pkg
+/Developer/usr/bin/packagemaker -v --doc Monobjc.pmdoc  --out Monobjc-${MONOBJC_VERSION}-${PKG_VERSION}.pkg
