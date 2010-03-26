@@ -2,8 +2,17 @@
 
 MONOBJC_VERSION="2.0.492.0"
 PKG_VERSION="0"
-MONOBJC_DIST="/Users/eric/Downloads/Monobjc-${MONOBJC_VERSION}/dist"
-MONODEVELOP_DIST="/Users/eric/Projects/MonoDevelop.Monobjc/bin/Debug"
+
+MONODEVELOP_DIST="../MonoDevelop.Monobjc/bin/Debug"
+MONOBJC_FILES="./monobjc-files"
+MONOBJC_DIST="${MONOBJC_FILES}/dist"
+
+rm -rf $MONOBJC_FILES
+mkdir $MONOBJC_FILES
+pushd $MONOBJC_FILES
+wget "http://downloads.monobjc.net/Monobjc-${MONOBJC_VERSION}.tar.gz"
+tar zxf "Monobjc-${MONOBJC_VERSION}.tar.gz"
+popd
 
 rm -rfv monobjc monobjc-msbuild
 

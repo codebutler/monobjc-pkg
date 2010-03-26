@@ -1,6 +1,7 @@
 monobjc/
 monobjc-monodevelop/
 monobjc-msbuild/
+monobjc-files/
 *.DS_Store
 *.swp
 *.pkg
